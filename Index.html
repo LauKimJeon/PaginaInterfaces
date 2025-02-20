@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Bookstore</title>
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@400;700&family=Merriweather&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #E3F2FD;
+        }
+
+        /* Aplicando fuentes */
+        h1, h2, h3, h4, h5, h6, .btn-custom {
+            font-family: 'Grandstander', cursive;
+        }
+
+        p, li {
+            font-family: 'Merriweather', serif;
+        }
+
+        .navbar {
+            background-color: white;
+        }
+
+        .highlight-box, .cta-box {
+            background-color: #a1e5f5;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .stats-box {
+            background-color: rgb(219, 219, 219);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Botón personalizado */
+        .btn-custom {
+            background-color: #45B0C8;
+            color: white;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #3A9AB2;
+        }
+
+        /* Ajustes de layout */
+        .cta-box {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .text-container {
+            max-width: 65%;
+            padding-right: 270px;
+        }
+
+        .img-container {
+            max-width: 180px;
+            height: auto;
+            margin-left: 20px;
+        }
+
+        /* Responsividad */
+        @media (max-width: 992px) {
+            .text-container {
+                max-width: 85%;
+                padding-right: 100px;
+            }
+            .img-container {
+                max-width: 160px;
+                margin-left: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cta-box {
+                flex-direction: column;
+                text-align: center;
+            }
+            .text-container {
+                max-width: 100%;
+                padding-right: 0;
+            }
+            .img-container {
+                max-width: 150px;
+                margin: 20px auto 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#"> 
+            <img src="Logo.jpg" alt="Logo" height="30"> 
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link text-primary" href="#">INICIO</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">EXPLORAR</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">COMUNIDAD</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">INICIA SESIÓN</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="3000">
+                    <img src="Carrusel1.jpg" class="d-block w-100" alt="El Rey Malvado - Slide 1">
+                </div>
+                <div class="carousel-item" data-interval="3000">
+                    <img src="Carrusel2.jpg" class="d-block w-100" alt="El Rey Malvado - Slide 2">
+                </div>
+                <div class="carousel-item" data-interval="3000">
+                    <img src="Carrusel3.jpg" class="d-block w-100" alt="El Rey Malvado - Slide 3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="highlight-box text-center p-4 d-flex align-items-center justify-content-between">
+            <div>
+                <h4>Secret Bookstore es una plataforma literaria para autores y lectores</h4>
+                <button class="btn btn-custom mt-3">Registrarse / Ingresar</button>
+            </div>
+            <img src="ImagenCuadrado.png" alt="Imagen representativa" class="img-fluid rounded-circle" style="max-width: 120px; height: auto;">
+        </div>
+    </div>
+
+    <div class="container mt-5"> 
+        <div class="row text-center justify-content-center">
+            <div class="col-md-3 stats-box p-4 mb-3 mx-2">
+                <h5>+120.000</h5>
+                <p>LECTORES FELICES</p>
+            </div>
+            <div class="col-md-3 stats-box p-4 mb-3 mx-2">
+                <h5>+100</h5>
+                <p>ESCRITORES</p>
+            </div>
+            <div class="col-md-3 stats-box p-4 mb-3 mx-2">
+                <h5>+100.000</h5>
+                <p>LIBROS PUBLICADOS</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="cta-box d-flex align-items-center justify-content-center p-4 flex-wrap">
+            <div class="text-container">
+                <h5>Publica con Secret Bookstore</h5>
+                <ul class="text-left">
+                    <li>Crea y escribe ficción interactiva.</li>
+                    <li>Publica tus historias creativas en cualquier momento.</li>
+                    <li>Protege tu Propiedad Intelectual.</li>
+                    <li>Gana dinero con tus historias.</li>
+                    <li>Valida la idea de tu historia.</li>
+                </ul>
+                <button class="btn btn-custom mt-2">Conoce más aquí</button>
+            </div>
+            <img src="Imagen Cuadro2.jpg" alt="Publica con Secret Bookstore" class="img-fluid rounded-circle img-container">
+        </div>
+    </div>
+</body>
+
+<footer class="footer mt-5 py-4 text-white text-center" style="background-color: #45B0C8;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h5>Secret Bookstore</h5>
+                <p>Descubre y publica historias increíbles.</p>
+            </div>
+        </div>
+        <hr class="bg-light">
+        <p class="mb-0">&copy; 2025 Secret Bookstore. Todos los derechos reservados.</p>
+    </div>
+</footer>
+</html>
